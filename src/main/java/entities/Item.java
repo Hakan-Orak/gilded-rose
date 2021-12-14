@@ -3,11 +3,13 @@ package entities;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-public class Item {
+public abstract class Item {
     public String name;
     public Integer sellIn;
     public Integer quality;
     public String type;
+
+    public abstract void UpdateQuality();
 
     public Item(String name, Integer sellIn, Integer quality, String type) {
         this.name = name;
@@ -27,4 +29,6 @@ public class Item {
             this.quality = 50;
         }
     }
+
+
 }
