@@ -1,23 +1,18 @@
 package entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
 public abstract class Item {
     public String name;
     public Integer sellIn;
     public Integer quality;
-    public String type;
-    public Integer price;
+    public Integer value;
 
-    public abstract void UpdateQuality();
+    public abstract void update();
 
-    public Item(String name, Integer sellIn, Integer quality, String type, Integer price) {
+    public Item(String name, Integer sellIn, Integer quality, Integer price) {
         this.name = name;
         this.sellIn = sellIn;
         this.quality = quality;
-        this.type = type;
-        this.price = price;
+        this.value = price;
     }
 
     protected void CellQualityTo50() {
@@ -38,8 +33,7 @@ public abstract class Item {
             "name='" + name + '\'' +
             ", sellIn=" + sellIn +
             ", quality=" + quality +
-            ", type='" + type + '\'' +
-            ", price=" + price +
+            ", price=" + value +
             '}';
     }
 }

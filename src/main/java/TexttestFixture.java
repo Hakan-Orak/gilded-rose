@@ -1,10 +1,12 @@
+import Shop.InMemoryInventoryRepository;
+import Shop.InventoryInteractor;
 import entities.Item;
-import entities.LegendaryItem;
 
 public class TexttestFixture {
     public static void main(String[] args) {
-        LegendaryItem legendaryItem = new LegendaryItem("Pourfendeur Divin", 50, 10, "Legendaire", 16);
-        System.out.println(legendaryItem.toString());
-
+        InventoryInteractor inventoryInteractory = new InventoryInteractor(new InMemoryInventoryRepository());
+        for (Item item : inventoryInteractory.getInvetory()) {
+            System.out.println(item.toString());
+        }
     }
 }
