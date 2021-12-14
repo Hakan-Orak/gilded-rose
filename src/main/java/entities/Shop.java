@@ -1,19 +1,12 @@
 package entities;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
 import java.util.List;
 
-@Data
 public class Shop {
-
+    public String name;
     public List<Item> items;
+    public Integer golds;
 
-    public Shop(List<Item> items) {
-        this.items = items;
-    }
-    public void updateQuality() {
-        //items.forEach();
-    }
+
+
+
 }
