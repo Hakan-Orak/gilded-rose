@@ -1,7 +1,7 @@
 package entities.shop;
 
-import entities.GenericItem;
-import entities.Item;
+import entities.item.GenericItem;
+import entities.item.Item;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +21,13 @@ public class ImMemomyShopRepository implements ShopRepository {
             shopGold += item.value;
         }
         return shopGold;
+    }
+
+    @Override
+    public void setShopGold(Integer gold, String typeOperation) {
+        if (typeOperation.equals("add")) {
+
+        }
     }
 
     @Override

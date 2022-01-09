@@ -1,17 +1,18 @@
 package entities.shop;
 
-import entities.Item;
+import entities.item.Item;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ShopInteractor {
-    private ShopRepository repository;
+//    private ShopRepository repository;
     private List<Item> items;
 
-    public ShopInteractor(ShopRepository shopRepository) {
-        this.repository = shopRepository;
+    public ShopInteractor(List<Item> items) {
+//        this.repository = shopRepository;
+        this.items = items;
     }
+
 
     public Integer getShopGold() {
         Integer shopGold = 0;
@@ -21,11 +22,15 @@ public class ShopInteractor {
         return shopGold;
     }
 
+    public void setShopGold(){
+
+    }
+
     public void updateQuality() {
         for(Item item: items) {
             item.update();
         }
-        this.repository.saveShop(items);
+//        this.repository.saveShop(items);
     }
 
 

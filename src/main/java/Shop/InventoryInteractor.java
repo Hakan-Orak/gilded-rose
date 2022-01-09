@@ -1,6 +1,6 @@
 package Shop;
 
-import entities.Item;
+import entities.item.Item;
 
 import java.util.List;
 

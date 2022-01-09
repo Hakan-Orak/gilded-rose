@@ -1,9 +1,30 @@
-package entities;
+package entities.item;
 
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Entity
+@Data
+@Table(name = "item")
 public abstract class Item {
+
+    public Item(){};
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+
+    @Column(name = "name")
     public String name;
+
+    @Column(name = "sellIn")
     public Integer sellIn;
+
+    @Column(name = "quality")
     public Integer quality;
+
+    @Column(name = "value")
     public Integer value;
 
     public abstract void update();

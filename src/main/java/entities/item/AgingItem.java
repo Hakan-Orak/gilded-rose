@@ -1,9 +1,9 @@
-package entities;
+package entities.item;
 
-public class AgedItem extends Item {
+public class AgingItem extends Item {
 
 
-    public AgedItem(String name, Integer sellIn, Integer quality, Integer price) {
+    public AgingItem(String name, Integer sellIn, Integer quality, Integer price) {
         super(name, sellIn, quality, price);
     }
 

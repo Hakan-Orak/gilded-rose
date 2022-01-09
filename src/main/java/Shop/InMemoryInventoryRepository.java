@@ -1,7 +1,7 @@
 package Shop;
 
-import entities.GenericItem;
-import entities.Item;
+import entities.item.GenericItem;
+import entities.item.Item;
 
 import java.util.ArrayList;
 import java.util.List;
